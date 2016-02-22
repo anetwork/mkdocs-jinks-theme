@@ -4,7 +4,7 @@ VERSION = '0.1.0'
 
 
 setup(
-    name="mkdocs-bootswatch",
+    name="mkdocs-jinks",
     version=VERSION,
     url='http://www.mkdocs.org',
     license='BSD',
