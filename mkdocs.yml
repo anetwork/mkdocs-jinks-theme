@@ -1,0 +1,10 @@
+site_name: MkDocs Jinks Themes
+site_url: http://not.yet/
+site_description: MkDocs Jinks Themes
+site_author: Anetwork Team
+
+repo_url: https://github.com/anetwork/mkdocs-jinks
+
+copyright: Copyright &copy; 2016 Anetwork
+
+theme_dir: mkdocs_jinks/jinks_en

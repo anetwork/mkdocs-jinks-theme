@@ -1,0 +1,27 @@
+{% if not nav_item.children %}
+
+	<li {% if nav_item.active %}class="active"{% endif %}>
+	
+		<a href="{{ nav_item.url }}">{{ nav_item.title }}</a>
+		
+	</li>
+
+{% else %}
+
+	<li>
+
+		<a href="javascript:void( 0 );">{{ nav_item.title }}</a>
+		
+		<ul>
+		
+			{% for nav_item in nav_item.children %}
+			
+				{% include "nav.html" %}
+				
+			{% endfor %}
+			
+		</ul>
+	
+	</li>
+  
+{% endif %}
