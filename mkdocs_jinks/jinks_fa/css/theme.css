@@ -183,6 +183,11 @@ header, footer, main {
 		background: rgba( 255, 255, 255, .1 );
 		background: linear-gradient( 130deg, rgba( 255, 255, 255, .1 ), transparent );
 	}
+	.sidebar > ul > li li.active {
+		background: #303030;
+		background: rgba( 110, 110, 110, .1 );
+		background: linear-gradient( -130deg, rgba( 130, 130, 130, .1 ), transparent );
+	}
 
 
 .body {
@@ -222,6 +227,7 @@ header {
 	}
 	header form .search-submit {
 		left: -5px;
+		top: 0;
 		opacity: .4;
 		-webkit-appearance: none;
 		-moz-appearance: none;
