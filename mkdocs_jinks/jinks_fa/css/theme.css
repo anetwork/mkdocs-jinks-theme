@@ -315,6 +315,10 @@ header {
 	margin: 15px 0;
 }
 
+.content img {
+	max-width: 100%;
+}
+
 .content hr {
 	height: 0;
 	border: 0;
