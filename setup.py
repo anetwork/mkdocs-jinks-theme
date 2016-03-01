@@ -6,18 +6,17 @@ VERSION = '0.1.0'
 setup(
     name="mkdocs-jinks",
     version=VERSION,
-    url='http://www.mkdocs.org',
+    url='https://github.com/anetwork/mkdocs-jinks-theme',
     license='BSD',
     description='Jinks themes for MkDocs',
     author='Anetwork Technical Team',
-    author_email='support@anetwork.ir',
+    author_email='dev@anetwork.io',
     packages=find_packages(),
     include_package_data=True,
     entry_points={
         'mkdocs.themes': [
             'jinks_en = mkdocs_jinks.jinks_en',
-            'jinks_fa = mkdocs_jinks.jinks_fa',
+            'jinks_fa = mkdocs_jinks.jinks_fa'
         ]
-    },
-    zip_safe=False
+    }
 )
