@@ -47,27 +47,27 @@
 /* ============= Animations ============= */
 
 @keyframes glow {
-	
+
 	from {
 		background: rgba( 255, 153, 0, .5 );
 	}
-	
+
 	to {
 		background: rgba( 255, 153, 0, 0 );
 	}
-	
+
 }
 
 @-webkit-keyframes glow {
-	
+
 	from {
 		background: rgba( 255, 153, 0, .4 );
 	}
-	
+
 	to {
 		background: rgba( 255, 153, 0, 0 );
 	}
-	
+
 }
 
 /* =============== Resets =============== */
@@ -96,6 +96,11 @@ html, body, p, ul, figure, a {
 
 main, header, figure, figcaption, footer, section, nav {
 	display: block;
+}
+
+::-webkit-input-placeholder {
+	color: #fff;
+	opacity: .5;
 }
 
 /* ============== Defaults ============== */
@@ -147,7 +152,7 @@ header, footer, main {
 	.sidebar ul {
 		list-style: none;
 	}
-	
+
 		.sidebar li a {
 			padding: 30px;
 			display: block;
@@ -166,18 +171,18 @@ header, footer, main {
 		.sidebar li:last-child > a {
 			border-bottom: 0;
 		}
-		
+
 			.sidebar li ul {
 				background: #2a2a2a;
 				box-shadow: -5px 0 5px 1px rgba( 0, 0, 0, .4 ) inset;
 			}
-			
+
 				.sidebar li ul a {
 					padding-right: 60px;
 					border-bottom-color: #1a1a1a;
 					border-top-color: #333;
 				}
-		
+
 	.sidebar > ul > li.active {
 		background: #4a4a4a;
 		background: rgba( 255, 255, 255, .1 );
@@ -237,7 +242,7 @@ header {
 		margin-right: 10px;
 		background: url( '../image/search-icon.png' ) no-repeat center center;
 	}
-	
+
 	header form input:first-child:focus {
 		width: 300px;
 	}
@@ -245,7 +250,7 @@ header {
 	header form input:focus {
 		border-bottom-color: rgba( 255, 255, 255, .8 );
 	}
-	
+
 .content {
 	width: 100%;
 	color: #333;
@@ -265,7 +270,7 @@ header {
 	.toc ul {
 		list-style: none;
 	}
-	
+
 	.toc li {
 		position: relative;
 	}
@@ -297,7 +302,7 @@ header {
 			color: #999;
 			font-size: 14px;
 		}
-		
+
 		.toc li:hover a, .toc li a:focus {
 			color: #333;
 		}
@@ -360,7 +365,7 @@ header {
 	.content table td {
 		border-right: 1px solid #e9e9e9;
 		border-bottom: 1px solid #e9e9e9;
-	
+
 	}
 	.content table td:first-child {
 		border-right: 0;
@@ -402,7 +407,7 @@ header {
 	#mkdocs-search-results article:last-child {
 		border-bottom: none;
 	}
-	
+
 footer {
 	background: #f90;
 	color: #fff;
@@ -415,14 +420,14 @@ footer {
 /* ============== Responsive ============= */
 
 @media screen and ( max-width: 1400px ) {
-	
+
 	.toc {
 		padding-right: 30px;
 	}
 		.toc li a {
 			padding: 4px 0;
 		}
-	
+
 	.sidebar li a {
 		padding: 20px;
 		font-size: 15px;
@@ -430,5 +435,5 @@ footer {
 		.sidebar li ul li a {
 			padding-right: 40px;
 		}
-	
+
 }

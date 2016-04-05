@@ -7,9 +7,9 @@
 -->
 <!DOCTYPE html>
 <head>
-	
+
 	<meta charset="UTF-8" />
-	
+
 	<!--
 		The page_title contains the title for a page as shown in the navigation.
 		Site name contains the name as defined in the mkdocs.yml
@@ -47,7 +47,7 @@
 
 	<link rel="stylesheet" href="{{ base_url }}/css/darkula.css">
 	<script src="{{ base_url }}/js/highlight.pack.js"></script>
-	
+
 	<!--
 		Include Google Analytics tracking code.
 
@@ -74,113 +74,113 @@
 	<div class="sidebar left">
 
 		<ul>
-		
+
 			{% for nav_item in nav %}
-				
+
 				{% include "nav.html" %}
-			
+
 			{% endfor %}
-		
+
 		</ul>
-		
+
 	</div>
-	
+
 	<div class="body rel right">
-	
+
 		<header>
-		
+
 			<div class="right">
-			
+
 				<h1>{% if page_title %}{{ page_title }} - {% endif %}{{ site_name }}</h1>
-			
+
 			</div>
-		
+
 			<div role="search" class="left">
-			
+
 				<form action="{{ base_url }}/search.html" class="rel" method="get">
-				
+
 					<input type="text" name="q" placeholder="جستجو" />
-					
+
 					<input type="submit" class="abs search-submit" value="" />
-					
+
 				</form>
-				
+
 			</div>
-		
+
 		</header>
-		
+
 		<main class="rel oh">
-		
+
 			{% if toc %}
-		
+
 				<div class="left toc">
-				
+
 					<ul>
-						
+
 						{% for toc_item in toc %}
-							
+
 							<li class="title">
-							
+
 								<a href="{{ toc_item.url }}">{{ toc_item.title }}</a>
-								
+
 							</li>
-							
+
 							{% for toc_item in toc_item.children %}
-								
+
 								<li class="sub-title">
-								
+
 									<a href="{{ toc_item.url }}">{{ toc_item.title }}</a>
-									
+
 								</li>
-							
+
 							{% endfor %}
-							
+
 						{% endfor %}
-						
+
 					</ul>
-					
+
 				</div>
-			
+
 			{% endif %}
-			
+
 			<div class="right content">
-		
+
 				{% block content %}
-					
+
 					{{ content }}
-				
+
 				{% endblock %}
 
 			</div>
 
 		</main>
-	
+
 		<footer class="oh">
-		
+
 			{% if repo_url %}
-				
+
 				{% if repo_name == 'GitHub' %}
-				
+
 					<a class="left" href="{{ repo_url }}">دسترسی به کد اصلی روی Github</a>
-					
+
 				{% elif repo_name == 'Bitbucket' %}
-				
+
 					<a class="left" href="{{ repo_url }}">دسترسی به کد اصلی روی BitBucket</a>
-					
+
 				{% else %}
-				
+
 					<a class="left" href="{{ repo_url }}">دسترسی به کد اصلی</a>
-					
+
 				{% endif %}
-				
+
 			{% endif %}
-			
+
 			<a class="right" href="http://www.mkdocs.org">ساخته شده توسط: MkDocs.</a>
 
 		</footer>
-	
+
 	</div>
-	
+
 	<!--
 		To include static assets from our theme, just add
 		{{ base_url }} beforehand which will be the relative path to
