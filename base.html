@@ -1,0 +1,203 @@
+<!--
+	This Basic theme serves as an example for how to create other
+	themes by demonstrating the features with minimal HTML and CSS.
+	Comments like this will be through the code to explain briefly
+	what each feature is and point you to the MkDocs documentation
+	to find out more.
+-->
+<!DOCTYPE html>
+<head>
+	
+	<meta charset="UTF-8" />
+	
+	<!--
+		The page_title contains the title for a page as shown in the navigation.
+		Site name contains the name as defined in the mkdocs.yml
+	-->
+	<title>{% if page_title %}{{ page_title }} - {% endif %}{{ site_name }}</title>
+
+	<!--
+		Support custom favicon support.
+		http://www.mkdocs.org/user-guide/configuration/#site_favicon
+	-->
+	{% if favicon %}
+		<link rel="shortcut icon" href="{{ favicon }}">
+	{% else %}
+		<link rel="shortcut icon" href="{{ base_url }}/img/favicon.ico">
+	{% endif %}
+
+	<!--
+		You can include external assets of course, but be aware that it means the
+		documentation may not work well offline.
+	-->
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+
+	<link rel="stylesheet" href="{{ base_url }}/css/theme.css">
+
+	<!--
+		extra_ess contains paths to CSS files in the users
+		documentation directory or a list of CSS files defined in
+		their mkdocs.yml.
+
+		http://www.mkdocs.org/user-guide/configuration/#extra_css
+	-->
+	{% for path in extra_css %}
+		<link href="{{ path }}" rel="stylesheet">
+	{% endfor %}
+
+	<link rel="stylesheet" href="{{ base_url }}/css/darkula.css">
+	<script src="{{ base_url }}/js/highlight.pack.js"></script>
+	
+	<!--
+		Include Google Analytics tracking code.
+
+		http://www.mkdocs.org/user-guide/configuration/#google_analytics
+	-->
+	{% if google_analytics %}
+	<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', '{{ google_analytics[0] }}', '{{ google_analytics[1] }}');
+			ga('send', 'pageview');
+	</script>
+	{% endif %}
+
+	{% block extrahead %}
+	{% endblock %}
+</head>
+
+<body>
+
+	<div class="sidebar right">
+
+		<ul>
+		
+			{% for nav_item in nav %}
+				
+				{% include "nav.html" %}
+			
+			{% endfor %}
+		
+		</ul>
+		
+	</div>
+	
+	<div class="body rel left">
+	
+		<header>
+		
+			<div class="left">
+			
+				<h1>{% if page_title %}{{ page_title }} - {% endif %}{{ site_name }}</h1>
+			
+			</div>
+		
+			<div role="search" class="right">
+			
+				<form action="{{ base_url }}/search.html" class="rel" method="get">
+				
+					<input type="text" name="q" placeholder="Search" />
+					
+					<input type="submit" class="abs search-submit" value="" />
+					
+				</form>
+				
+			</div>
+		
+		</header>
+		
+		<main class="rel oh">
+		
+			{% if toc %}
+		
+				<div class="right toc">
+				
+					<ul>
+						
+						{% for toc_item in toc %}
+							
+							<li class="title">
+							
+								<a href="{{ toc_item.url }}">{{ toc_item.title }}</a>
+								
+							</li>
+							
+							{% for toc_item in toc_item.children %}
+								
+								<li class="sub-title">
+								
+									<a href="{{ toc_item.url }}">{{ toc_item.title }}</a>
+									
+								</li>
+							
+							{% endfor %}
+							
+						{% endfor %}
+						
+					</ul>
+					
+				</div>
+			
+			{% endif %}
+			
+			<div class="left content">
+		
+				{% block content %}
+					
+					{{ content }}
+				
+				{% endblock %}
+
+			</div>
+
+		</main>
+	
+		<footer class="oh">
+		
+			{% if repo_url %}
+				
+				{% if repo_name == 'GitHub' %}
+				
+					<a class="left" href="{{ repo_url }}">Fork on Github</a>
+					
+				{% elif repo_name == 'Bitbucket' %}
+				
+					<a class="left" href="{{ repo_url }}">Fork on BitBucket</a>
+					
+				{% else %}
+				
+					<a class="left" href="{{ repo_url }}">Fork</a>
+					
+				{% endif %}
+				
+			{% endif %}
+			
+			<a class="right" href="http://www.mkdocs.org">Built with: MkDocs.</a>
+
+		</footer>
+	
+	</div>
+	
+	<!--
+		To include static assets from our theme, just add
+		{{ base_url }} beforehand which will be the relative path to
+		the root of the documentation.
+	-->
+	<script src="{{ base_url }}/js/theme.js"></script>
+
+	<!--
+		extra_javascript contains paths to JavaScript files in the
+		users documentation directory or a list of JavaScript files
+		defined in their mkdocs.yml.
+
+		http://www.mkdocs.org/user-guide/configuration/#extra_javascript
+	-->
+	{% for path in extra_javascript %}
+		<script src="{{ path }}"></script>
+	{% endfor %}
+
+</body>
+</html>

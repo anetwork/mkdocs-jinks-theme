@@ -1,0 +1,434 @@
+/* =============== Fonts ================ */
+
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/droidkufi/DroidKufi-Regular.eot);
+  src: url(../font/droidkufi/DroidKufi-Regular.eot?#iefix) format('embedded-opentype'),
+       url(../font/droidkufi/DroidKufi-Regular.woff2) format('woff2'),
+       url(../font/droidkufi/DroidKufi-Regular.woff) format('woff'),
+       url(../font/droidkufi/DroidKufi-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../font/droidkufi/DroidKufi-Bold.eot);
+  src: url(../font/droidkufi/DroidKufi-Bold.eot?#iefix) format('embedded-opentype'),
+       url(../font/droidkufi/DroidKufi-Bold.woff2) format('woff2'),
+       url(../font/droidkufi/DroidKufi-Bold.woff) format('woff'),
+       url(../font/droidkufi/DroidKufi-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Droid Arabic Naskh';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/droidnaskh/DroidNaskh-Regular.eot);
+  src: url(../font/droidnaskh/DroidNaskh-Regular.eot?#iefix) format('embedded-opentype'),
+       url(../font/droidnaskh/DroidNaskh-Regular.woff2) format('woff2'),
+       url(../font/droidnaskh/DroidNaskh-Regular.woff) format('woff'),
+       url(../font/droidnaskh/DroidNaskh-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Droid Arabic Naskh';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../font/droidnaskh/DroidNaskh-Bold.eot);
+  src: url(../font/droidnaskh/DroidNaskh-Bold.eot?#iefix) format('embedded-opentype'),
+       url(../font/droidnaskh/DroidNaskh-Bold.woff2) format('woff2'),
+       url(../font/droidnaskh/DroidNaskh-Bold.woff) format('woff'),
+       url(../font/droidnaskh/DroidNaskh-Bold.ttf) format('truetype');
+}
+
+/* ============= Animations ============= */
+
+@keyframes glow {
+	
+	from {
+		background: rgba( 255, 153, 0, .5 );
+	}
+	
+	to {
+		background: rgba( 255, 153, 0, 0 );
+	}
+	
+}
+
+@-webkit-keyframes glow {
+	
+	from {
+		background: rgba( 255, 153, 0, .4 );
+	}
+	
+	to {
+		background: rgba( 255, 153, 0, 0 );
+	}
+	
+}
+
+/* =============== Resets =============== */
+
+*, *:before, *:after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+html, body, p, ul, figure, a {
+	margin: 0;
+	padding: 0;
+}
+
+main, header, figure, figcaption, footer, section, nav {
+	display: block;
+}
+
+/* ============== Defaults ============== */
+
+.right { float: right }
+.left { float: left }
+
+.abs { position: absolute }
+.rel { position: relative }
+.fix { position: fixed }
+
+.ta-left { text-align: left }
+.ta-right { text-align: right }
+.ta-center { text-align: center }
+
+.rtl { direction: rtl }
+.ltr { direction: ltr }
+
+.oh { overflow: hidden }
+
+/* ============== Our theme ============= */
+
+html, body {
+	direction: rtl;
+	font-family: 'Droid Arabic Kufi', sans-serif;
+	height: 100%;
+}
+
+.content p {
+	font-family: 'Droid Arabic Naskh', sans-serif;
+	font-size: 15px;
+}
+
+header, footer, main {
+	padding: 50px;
+}
+
+.sidebar {
+	width: 20%;
+	max-width: 350px;
+	min-width: 250px;
+	background: #333;
+	top: 0;
+	bottom: 0;
+	position: fixed;
+	left: 0;
+	overflow: auto;
+}
+	.sidebar ul {
+		list-style: none;
+	}
+	
+		.sidebar li a {
+			padding: 30px;
+			display: block;
+			color: #ccc;
+			border-top: 1px solid #444;
+			border-bottom: 1px solid #222;
+			-webkit-transition: .2s;
+			transition: .2s;
+		}
+		.sidebar li a:hover, .sidebar li a:focus {
+			color: #f90;
+		}
+		.sidebar li:first-child > a {
+			border-top: 0;
+		}
+		.sidebar li:last-child > a {
+			border-bottom: 0;
+		}
+		
+			.sidebar li ul {
+				background: #2a2a2a;
+				box-shadow: -5px 0 5px 1px rgba( 0, 0, 0, .4 ) inset;
+			}
+			
+				.sidebar li ul a {
+					padding-right: 60px;
+					border-bottom-color: #1a1a1a;
+					border-top-color: #333;
+				}
+		
+	.sidebar > ul > li.active {
+		background: #4a4a4a;
+		background: rgba( 255, 255, 255, .1 );
+		background: linear-gradient( 130deg, rgba( 255, 255, 255, .1 ), transparent );
+	}
+	.sidebar > ul > li li.active {
+		background: #303030;
+		background: rgba( 110, 110, 110, .1 );
+		background: linear-gradient( -130deg, rgba( 130, 130, 130, .1 ), transparent );
+	}
+
+
+.body {
+	width: 80%;
+	min-width: calc( 100% - 350px );
+	max-width: calc( 100% - 250px );
+	min-height: 100%;
+	padding-bottom: 130px;
+}
+
+header h1 {
+	font-size: 32px;
+	margin: 0;
+	line-height: 100%;
+}
+
+header {
+	background: #f90;
+	overflow: hidden;
+	padding: 50px;
+	color: #fff;
+	text-shadow: 0 1px 0 #333;
+}
+
+	header form input {
+		padding: 7px 4px;
+		height: 40px;
+		background: none;
+		border: 0;
+		outline: 0;
+		font-size: 13px;
+		font-weight: normal;
+		width: 250px;
+		border-bottom: 1px solid rgba( 255, 255, 255, .4 );
+		-webkit-transition: .2s;
+		transition: .2s;
+	}
+	header form .search-submit {
+		left: -5px;
+		top: 0;
+		opacity: .4;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		width: 40px;
+		border-bottom: 0;
+		margin-right: 10px;
+		background: url( '../image/search-icon.png' ) no-repeat center center;
+	}
+	
+	header form input:first-child:focus {
+		width: 300px;
+	}
+	header form :focus + .search-submit { opacity: .8; }
+	header form input:focus {
+		border-bottom-color: rgba( 255, 255, 255, .8 );
+	}
+	
+.content {
+	width: 100%;
+	color: #333;
+}
+.toc + .content {
+	width: 85%;
+	min-width: calc( 100% - 300px );
+	max-width: calc( 100% - 200px );
+}
+.toc {
+	width: 15%;
+	max-width: calc( 300px );
+	min-width: calc( 200px );
+	padding-right: 50px;
+}
+
+	.toc ul {
+		list-style: none;
+	}
+	
+	.toc li {
+		position: relative;
+	}
+	.toc .sub-title {
+	}
+	.toc .title:first-child {
+		margin-top: 0;
+	}
+	.toc .sub-title:after {
+		content: '';
+		position: absolute;
+		right: 8px;
+		width: 5px;
+		height: 5px;
+		top: 50%;
+		border-radius: 50%;
+		margin-top: -2px;
+		opacity: .5;
+		background: #f90;
+	}
+		.toc li a {
+			padding: 5px 0;
+			display: block;
+			font-size: 18px;
+			color: #777;
+		}
+		.toc .sub-title a {
+			padding-right: 25px;
+			color: #999;
+			font-size: 14px;
+		}
+		
+		.toc li:hover a, .toc li a:focus {
+			color: #333;
+		}
+
+.content code, .content .code {
+	padding: 10px;
+	background: #333;
+	color: #fff;
+	font: 16px 'Courier new', courier, monospace;
+}
+.content .code {
+	margin: 5px 0;
+}
+.content code {
+	margin: 3px 5px;
+	padding: 5px 8px;
+	display: inline-block;
+}
+
+.content p {
+	margin: 15px 0;
+}
+
+.content img {
+	max-width: 100%;
+}
+
+.content hr {
+	height: 0;
+	border: 0;
+	border-bottom: 1px solid #ccc;
+}
+
+.content h1 {
+	text-align: center;
+}
+
+.content a {
+	border-bottom: 1px solid #333;
+}
+
+.content img {
+	max-width: 100%;
+}
+
+.content table {
+	min-width: 100%;
+}
+	.content table th {
+		background: #fff;
+		color: #333;
+		border-bottom: 1px solid #f90;
+	}
+
+	.content table th, .content table td {
+		padding: 10px;
+		text-align: right;
+	}
+
+	.content table td {
+		border-right: 1px solid #e9e9e9;
+		border-bottom: 1px solid #e9e9e9;
+	
+	}
+	.content table td:first-child {
+		border-right: 0;
+	}
+	.content table tr:last-child td {
+		border-bottom: 0;
+	}
+	.content tr:nth-child( even ) td {
+		background: #f7f7f7;
+	}
+
+.content :target {
+	-webkit-animation: glow 1s;
+	-moz-animation: glow 1s;
+	animation: glow 1s;
+}
+
+
+#mkdocs-search-query {
+	width: 250px;
+	height: 40px;
+	padding: 5px 8px;
+}
+#mkdocs-search-results {
+	margin-top: 20px;
+}
+	#mkdocs-search-results article {
+		border-bottom: 1px solid #ccc;
+		margin: 0;
+		padding: 20px;
+		color: #333;
+	}
+	#mkdocs-search-results article:hover h3, #mkdocs-search-results article h3 a:focus {
+		color: #f90;
+	}
+		#mkdocs-search-results article p {
+			color: #999;
+		}
+	#mkdocs-search-results article:last-child {
+		border-bottom: none;
+	}
+	
+footer {
+	background: #f90;
+	color: #fff;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+/* ============== Responsive ============= */
+
+@media screen and ( max-width: 1400px ) {
+	
+	.toc {
+		padding-right: 30px;
+	}
+		.toc li a {
+			padding: 4px 0;
+		}
+	
+	.sidebar li a {
+		padding: 20px;
+		font-size: 15px;
+	}
+		.sidebar li ul li a {
+			padding-right: 40px;
+		}
+	
+}

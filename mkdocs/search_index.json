@@ -1,0 +1,54 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "User Guide\n\n\nOverview\n\n\nMKDOCS is a fast and simple static website generator written in markdown and confiqured with single YAML file to provide projects documentation.\n\n\nHost anywhere\n\n\nYou can host this HTML static pages on Github pages, Amazon S3 or anywhere else\n\n\nEasy to customize\n\n\nCustomize the theme just the way you like easily.\n\n\nInstallation\n\n\nIn order to install MkDocs you'll need Python installed on your system, as well as the Python package manager, pip. You can check if you have these already installed like so:\n\n\n$ python --version\nPython 2.7.2\n$ pip --version\npip 1.5.2\n\n\n\n\nMkDocs supports Python 2.6, 2.7, 3.3, 3.4 and 3.5.\n\n\nOn Windows we recommend that you install Python and pip with \nChocolatey\n.\n\n\nInstall the mkdocs package using pip\n\n\npip install mkdocs\n\n\n\n\nYou should now have the mkdocs command installed on your system. Run mkdocs --version to check that everything worked okay.\n\n\n$ mkdocs --version\nmkdocs, version 0.15.2\n\n\n\n\nGetting started\n\n\nGetting started is super easy.\n\n\nmkdocs new my-project\ncd my-project\n\n\n\n\nLet's check initial project which has been created for us.\n\n\n\n\nThere's a single configuration file named mkdocs.yml, and a folder named docs that will contain our documentation source files. Right now the docs folder just contains a single documentation page, named index.md.\n\n\nMkDocs comes with a built-in webserver that lets you preview your documentation as you work on it. We start the webserver by making sure we're in the same directory as the mkdocs.yml config file, and then running the mkdocs serve command:\n\n\n$ mkdocs serve\nRunning at: http://127.0.0.1:8000/\n\n\n\n\nOpen up \nhttp://127.0.0.1:8000\n in your browser, and you'll see the index page being displayed:\n\n\n\n\nThe webserver also supports auto-reloading, and will rebuild your documentation whenever anything in the configuration file, documentation directory or theme directory changes.\n\n\nGo ahead and edit the docs/index.md file now and save the file. Then simply hit reload in the browser and you'll see your updated documentation.\n\n\nTo edit the configuration file, mkdocs.yml. Change the site_name setting to something else and save the file.\n\n\n\n\nAdding pages\n\n\nGo to docs/index.md document and change the initial heading to MkLorum, then reload the site in your browser, and you should see the change take effect immediately.\n\n\nLet's also add a second page to our documentation:\n\n\ncurl 'jaspervdj.be/lorem-markdownum/markdown.txt' > docs/about.md\n\n\n\n\nWe'd like our documentation site to include some navigation headers, so we'll edit the configuration file and add some information about the order and title to use for out headers:\n\n\nsite_name: My Docs\npages:\n- Home: index.md\n- About: about.md\ntheme: basic_theme\n\n\n\n\nMore Commands\n\n\nThere are various other commands and options available. For a complete list of commands, use the --help flag:\n\n\nmkdocs --help\n\n\n\n\nJinks Installation\n\n\nYou can easily download Jinks themes with Pip:\n\n\npip install mkdocs-jinks\n\n\n\n\nTo change the theme of your documentation site you need to open mkdocs.yml. and add this line:\n\n\ntheme: jinks_en\n\n\n\n\n\n\nAnd run it as we said before by following command:\n\n\nmkdocs serve",
+            "title": "Home"
+        },
+        {
+            "location": "/#user-guide",
+            "text": "",
+            "title": "User Guide"
+        },
+        {
+            "location": "/#overview",
+            "text": "MKDOCS is a fast and simple static website generator written in markdown and confiqured with single YAML file to provide projects documentation.",
+            "title": "Overview"
+        },
+        {
+            "location": "/#host-anywhere",
+            "text": "You can host this HTML static pages on Github pages, Amazon S3 or anywhere else",
+            "title": "Host anywhere"
+        },
+        {
+            "location": "/#easy-to-customize",
+            "text": "Customize the theme just the way you like easily.",
+            "title": "Easy to customize"
+        },
+        {
+            "location": "/#installation",
+            "text": "In order to install MkDocs you'll need Python installed on your system, as well as the Python package manager, pip. You can check if you have these already installed like so:  $ python --version\nPython 2.7.2\n$ pip --version\npip 1.5.2  MkDocs supports Python 2.6, 2.7, 3.3, 3.4 and 3.5.  On Windows we recommend that you install Python and pip with  Chocolatey .  Install the mkdocs package using pip  pip install mkdocs  You should now have the mkdocs command installed on your system. Run mkdocs --version to check that everything worked okay.  $ mkdocs --version\nmkdocs, version 0.15.2",
+            "title": "Installation"
+        },
+        {
+            "location": "/#getting-started",
+            "text": "Getting started is super easy.  mkdocs new my-project\ncd my-project  Let's check initial project which has been created for us.   There's a single configuration file named mkdocs.yml, and a folder named docs that will contain our documentation source files. Right now the docs folder just contains a single documentation page, named index.md.  MkDocs comes with a built-in webserver that lets you preview your documentation as you work on it. We start the webserver by making sure we're in the same directory as the mkdocs.yml config file, and then running the mkdocs serve command:  $ mkdocs serve\nRunning at: http://127.0.0.1:8000/  Open up  http://127.0.0.1:8000  in your browser, and you'll see the index page being displayed:   The webserver also supports auto-reloading, and will rebuild your documentation whenever anything in the configuration file, documentation directory or theme directory changes.  Go ahead and edit the docs/index.md file now and save the file. Then simply hit reload in the browser and you'll see your updated documentation.  To edit the configuration file, mkdocs.yml. Change the site_name setting to something else and save the file.",
+            "title": "Getting started"
+        },
+        {
+            "location": "/#adding-pages",
+            "text": "Go to docs/index.md document and change the initial heading to MkLorum, then reload the site in your browser, and you should see the change take effect immediately.  Let's also add a second page to our documentation:  curl 'jaspervdj.be/lorem-markdownum/markdown.txt' > docs/about.md  We'd like our documentation site to include some navigation headers, so we'll edit the configuration file and add some information about the order and title to use for out headers:  site_name: My Docs\npages:\n- Home: index.md\n- About: about.md\ntheme: basic_theme",
+            "title": "Adding pages"
+        },
+        {
+            "location": "/#more-commands",
+            "text": "There are various other commands and options available. For a complete list of commands, use the --help flag:  mkdocs --help",
+            "title": "More Commands"
+        },
+        {
+            "location": "/#jinks-installation",
+            "text": "You can easily download Jinks themes with Pip:  pip install mkdocs-jinks  To change the theme of your documentation site you need to open mkdocs.yml. and add this line:  theme: jinks_en   And run it as we said before by following command:  mkdocs serve",
+            "title": "Jinks Installation"
+        }
+    ]
+}

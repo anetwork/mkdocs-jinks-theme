@@ -1,0 +1,297 @@
+<!--
+	This Basic theme serves as an example for how to create other
+	themes by demonstrating the features with minimal HTML and CSS.
+	Comments like this will be through the code to explain briefly
+	what each feature is and point you to the MkDocs documentation
+	to find out more.
+-->
+<!DOCTYPE html>
+<head>
+	
+	<meta charset="UTF-8" />
+	
+	<!--
+		The page_title contains the title for a page as shown in the navigation.
+		Site name contains the name as defined in the mkdocs.yml
+	-->
+	<title>تم فارسی</title>
+
+	<!--
+		Support custom favicon support.
+		http://www.mkdocs.org/user-guide/configuration/#site_favicon
+	-->
+	
+		<link rel="shortcut icon" href="./img/favicon.ico">
+	
+
+	<!--
+		You can include external assets of course, but be aware that it means the
+		documentation may not work well offline.
+	-->
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+
+	<link rel="stylesheet" href="./css/theme.css">
+
+	<!--
+		extra_ess contains paths to CSS files in the users
+		documentation directory or a list of CSS files defined in
+		their mkdocs.yml.
+
+		http://www.mkdocs.org/user-guide/configuration/#extra_css
+	-->
+	
+
+	<link rel="stylesheet" href="./css/darkula.css">
+	<script src="./js/highlight.pack.js"></script>
+	
+	<!--
+		Include Google Analytics tracking code.
+
+		http://www.mkdocs.org/user-guide/configuration/#google_analytics
+	-->
+	
+
+	
+	
+</head>
+
+<body>
+
+	<div class="sidebar left">
+
+		<ul>
+		
+			
+				
+				
+
+	<li class="active">
+	
+		<a href=".">خانه</a>
+		
+	</li>
+
+
+			
+			
+		
+		</ul>
+		
+	</div>
+	
+	<div class="body rel right">
+	
+		<header>
+		
+			<div class="right">
+			
+				<h1>تم فارسی</h1>
+			
+			</div>
+		
+			<div role="search" class="left">
+			
+				<form action="./search.html" class="rel" method="get">
+				
+					<input type="text" name="q" placeholder="جستجو" />
+					
+					<input type="submit" class="abs search-submit" value="" />
+					
+				</form>
+				
+			</div>
+		
+		</header>
+		
+		<main class="rel oh">
+		
+			
+		
+				<div class="left toc">
+				
+					<ul>
+						
+						
+							
+							<li class="title">
+							
+								<a href="#_1">راهنما</a>
+								
+							</li>
+							
+							
+								
+								<li class="sub-title">
+								
+									<a href="#_2">نگاه اجمالی</a>
+									
+								</li>
+							
+							
+								
+								<li class="sub-title">
+								
+									<a href="#_3">میزبانی در هر کجا که بخواهید</a>
+									
+								</li>
+							
+							
+								
+								<li class="sub-title">
+								
+									<a href="#_4">به آسانی سفارشی کنید</a>
+									
+								</li>
+							
+							
+								
+								<li class="sub-title">
+								
+									<a href="#_5">راهنمای نصب</a>
+									
+								</li>
+							
+							
+								
+								<li class="sub-title">
+								
+									<a href="#_6">وقت شروعه</a>
+									
+								</li>
+							
+							
+								
+								<li class="sub-title">
+								
+									<a href="#_7">اضافه کردن صفحات</a>
+									
+								</li>
+							
+							
+								
+								<li class="sub-title">
+								
+									<a href="#_8">سایر دستورات</a>
+									
+								</li>
+							
+							
+							
+						
+						
+					</ul>
+					
+				</div>
+			
+			
+			
+			<div class="right content">
+		
+				
+					
+					<h1 id="_1">راهنما</h1>
+<h2 id="_2">نگاه اجمالی</h2>
+<p>MKDOCS یک راه حل سریع و آسان برای تولید وبسایتهای ایستا جهت فراهم آوردن مستندات پروژه است. فایل های مستندات با زبان Markdown نوشته شده و به همراه یک فایل YAML تهیه می شوند.</p>
+<h2 id="_3">میزبانی در هر کجا که بخواهید</h2>
+<p>شما میتوانید این صفحات استاتیک HTML را در صفحات گیت هاب، آمازونS3 و یا هر جای دیگر قرار دهید.</p>
+<h2 id="_4">به آسانی سفارشی کنید</h2>
+<p>با سفارشی کردن قالب ها، نمایش مستندات پروژه تان را به سلیقه خود عوض کنید.</p>
+<h2 id="_5">راهنمای نصب</h2>
+<p>برای نصب MKDOCS در ابتدا لازم است پایتون را به همراه پکیج منجر پایتون - pip ( پکیج منجر در فایل ستاپ پایتون موجود است )  روی سیستم خود نصب کنید.</p>
+<p>از طریق دستورات زیر مطمئن شوید که پایتون به درستی روی سیستم نصب شده است.</p>
+<pre><code>$ python --version
+Python 2.7.2
+$ pip --version
+pip 1.5.2
+</code></pre>
+
+<p>MKDOCS از پایتون 2.6، 2.7، 3.3 و 3.4 پشتیبانی می کند.</p>
+<p>به کاربران ویندوز پیشنهاد می کنیم برای راه اندازی پایتون و pip از <a href="http://chocolatey.org/">Chocolatey</a> استفاده کنند.</p>
+<p>پکیج MKDOCS را با کمک دستور زیر نصب کنید.</p>
+<pre><code>pip install mkdocs
+</code></pre>
+
+<p>پکیج MKDOCS الان باید روی سیستم شما نصب شده باشد.</p>
+<p>با کمک دستور mkdocs --version میتوانید مطمئن شوید همه چیز سر جای خودش است.</p>
+<pre><code>$ mkdocs --version
+mkdocs, version 0.15.2
+</code></pre>
+
+<h2 id="_6">وقت شروعه</h2>
+<p>ساختن یک پروژه ساده است.</p>
+<pre><code>mkdocs new my-project
+cd my-project
+</code></pre>
+
+<p>بگذارید ببینیم پروژه ای که ساخته ایم، کجاست.</p>
+<p><img alt="directory" src="http://s3.img7.ir/fDqrh.jpg" title="Directory" /></p>
+<p>یک فایل تنظیمات با اسم mkdocs.yml و یک فولدر با نام docs که شامل فایل های مستنداتمان است.</p>
+<p>در حال حاضر فولدر docs تنها شامل یک فایل index.md است.</p>
+<p>MKDOCS به همراه یک وب سرور داخلی در اختیارتان است و به شما این امکان را می دهد همزمان که روی مستندات کار می کنید پیش نمایشی از آن را هم ببینید.</p>
+<p>برای استفاده ابتدا به مسیر قرار گرفتن فایل mkdocs.yml بروید و بعد دستور mkdocs serve را اجرا کنید.</p>
+<pre><code>$ mkdocs serve
+Running at: http://127.0.0.1:8000/
+</code></pre>
+
+<p>آدرس <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000</a> را در مروگر باز کنید، صفحه ایندکس برایتان به نمایش در می آید.</p>
+<p><img alt="directory" src="http://s3.img7.ir/i6NSL.jpg" title="Directory" /></p>
+<p>این وب سرور از auto-reloading پشتیبانی می کند و در صورت هر گونه تغییر در فایل تنظیمات، دایرکتوری مستندات و یا دایرکتوری قالب، مجددا بازخوانی میشود.</p>
+<p>به docs/index.md بروید و ویرایشش کنید. مرورگر رو ریلود کنید و تغییرات صورت گرفته را تماشا کنید.</p>
+<p>حال زمان مناسبی ست تا فایل تنظیمات را ویرایش کنید. در mkdocs.yml  مقدار site_name را عوض کنید.
+به محض ریلود صفحه تغییرات اعمال شده را خواهید دید.</p>
+<p><img alt="directory" src="http://s3.img7.ir/1lzQw.jpg" title="Directory" /></p>
+<h2 id="_7">اضافه کردن صفحات</h2>
+<p>به آدرس docs/index.md بروید و تیتر پیش فرض را به MKLorum تغییر دهید. حالا صفحه را مجددا بارگذاری کنید. تغییرات باید اعمال شده باشند.</p>
+<p>بیاید یک صفحه به داکیومنت اضافه کنیم.</p>
+<pre><code>curl 'jaspervdj.be/lorem-markdownum/markdown.txt' &gt; docs/about.md
+</code></pre>
+
+<p>برای اضافه کردن نویگیشن باز هم به سراغ فایل تنظیمات می رویم و اطلاعات لازم برای اضافه شدن به هدر را وارد می کنیم.
+کافی ست بار دیگر صفحه را بارگذاری کنید تا ببینید دو مورد Home و About به نویگیشن بار اضافه شده اند.</p>
+<h2 id="_8">سایر دستورات</h2>
+<p>دستورات مختلفی در دسترس هستند که می توانید با وارد کردن دستور زیر از آنها آگاه بشوید.</p>
+<pre><code>mkdocs --help
+</code></pre>
+				
+				
+
+			</div>
+
+		</main>
+	
+		<footer class="oh">
+		
+			
+				
+				
+				
+					<a class="left" href="https://github.com/anetwork/mkdocs-jinks">دسترسی به کد اصلی روی Github</a>
+					
+				
+				
+			
+			
+			<a class="right" href="http://www.mkdocs.org">ساخته شده توسط: MkDocs.</a>
+
+		</footer>
+	
+	</div>
+	
+	<!--
+		To include static assets from our theme, just add
+		. beforehand which will be the relative path to
+		the root of the documentation.
+	-->
+	<script src="./js/theme.js"></script>
+
+	<!--
+		extra_javascript contains paths to JavaScript files in the
+		users documentation directory or a list of JavaScript files
+		defined in their mkdocs.yml.
+
+		http://www.mkdocs.org/user-guide/configuration/#extra_javascript
+	-->
+	
+
+</body>
+</html>
