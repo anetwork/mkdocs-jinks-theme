@@ -14,7 +14,7 @@
 		The page_title contains the title for a page as shown in the navigation.
 		Site name contains the name as defined in the mkdocs.yml
 	-->
-	<title>تم فارسی</title>
+	<title>My Docs</title>
 
 	<!--
 		Support custom favicon support.
@@ -67,7 +67,7 @@
 
 	<li class="active">
 	
-		<a href=".">خانه</a>
+		<a href=".">Home</a>
 		
 	</li>
 
@@ -85,7 +85,7 @@
 		
 			<div class="right">
 			
-				<h1>تم فارسی</h1>
+				<h1>My Docs</h1>
 			
 			</div>
 		
@@ -176,6 +176,14 @@
 								</li>
 							
 							
+								
+								<li class="sub-title">
+								
+									<a href="#jinks">راهنمای نصب قالب Jinks</a>
+									
+								</li>
+							
+							
 							
 						
 						
@@ -211,7 +219,7 @@ pip 1.5.2
 <pre><code>pip install mkdocs
 </code></pre>
 
-<p>پکیج MKDOCS الان باید روی سیستم شما نصب شده باشد.</p>
+<p>پکیج MKDOCS الان باید روی سیستم شما نصب شده باشد. </p>
 <p>با کمک دستور mkdocs --version میتوانید مطمئن شوید همه چیز سر جای خودش است.</p>
 <pre><code>$ mkdocs --version
 mkdocs, version 0.15.2
@@ -234,7 +242,7 @@ Running at: http://127.0.0.1:8000/
 </code></pre>
 
 <p>آدرس <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000</a> را در مروگر باز کنید، صفحه ایندکس برایتان به نمایش در می آید.</p>
-<p><img alt="directory" src="http://s3.img7.ir/i6NSL.jpg" title="Directory" /></p>
+<p><img alt="directory" src="http://s3.img7.ir/NYv35.png" title="Directory" /></p>
 <p>این وب سرور از auto-reloading پشتیبانی می کند و در صورت هر گونه تغییر در فایل تنظیمات، دایرکتوری مستندات و یا دایرکتوری قالب، مجددا بازخوانی میشود.</p>
 <p>به docs/index.md بروید و ویرایشش کنید. مرورگر رو ریلود کنید و تغییرات صورت گرفته را تماشا کنید.</p>
 <p>حال زمان مناسبی ست تا فایل تنظیمات را ویرایش کنید. در mkdocs.yml  مقدار site_name را عوض کنید.
@@ -246,12 +254,31 @@ Running at: http://127.0.0.1:8000/
 <pre><code>curl 'jaspervdj.be/lorem-markdownum/markdown.txt' &gt; docs/about.md
 </code></pre>
 
-<p>برای اضافه کردن نویگیشن باز هم به سراغ فایل تنظیمات می رویم و اطلاعات لازم برای اضافه شدن به هدر را وارد می کنیم.
-کافی ست بار دیگر صفحه را بارگذاری کنید تا ببینید دو مورد Home و About به نویگیشن بار اضافه شده اند.</p>
+<p>برای اضافه کردن نویگیشن باز هم به سراغ فایل تنظیمات می رویم و اطلاعات لازم برای اضافه شدن به هدر را وارد می کنیم.</p>
+<pre><code>site_name: My Docs
+pages:
+- Home: index.md
+- About: about.md
+theme: basic_theme
+</code></pre>
+
+<p>کافی ست بار دیگر صفحه را بارگذاری کنید تا ببینید دو مورد Home و About به نویگیشن بار اضافه شده اند.</p>
 <h2 id="_8">سایر دستورات</h2>
 <p>دستورات مختلفی در دسترس هستند که می توانید با وارد کردن دستور زیر از آنها آگاه بشوید.</p>
 <pre><code>mkdocs --help
 </code></pre>
+
+<h2 id="jinks">راهنمای نصب قالب Jinks</h2>
+<p>شما میتوانید به راحتی این قالب را با استفاده از Pip دانلود کنید.</p>
+<pre><code>pip install mkdocs-jinks
+</code></pre>
+
+<p>و برای تغییر تم داکیومت در فایل mkdocs.yml. خط زیر را بیفزایید:</p>
+<pre><code>theme: jinks_fa
+</code></pre>
+
+<p><img alt="directory" src="http://s3.img7.ir/vmVIg.jpg" title="Directory" /></p>
+<p>و سپس همانطور که پیش تر گفته شد با دستور mkdocs serve نتیجه را ببینید.</p>
 				
 				
 
@@ -261,14 +288,6 @@ Running at: http://127.0.0.1:8000/
 	
 		<footer class="oh">
 		
-			
-				
-				
-				
-					<a class="left" href="https://github.com/anetwork/mkdocs-jinks">دسترسی به کد اصلی روی Github</a>
-					
-				
-				
 			
 			
 			<a class="right" href="http://www.mkdocs.org">ساخته شده توسط: MkDocs.</a>
