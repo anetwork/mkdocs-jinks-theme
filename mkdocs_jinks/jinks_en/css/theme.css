@@ -141,7 +141,7 @@ header, footer, main {
 			}
 
 				.sidebar li ul a {
-					padding-right: 60px;
+					padding-left: 60px;
 					border-bottom-color: #1a1a1a;
 					border-top-color: #333;
 				}
@@ -395,7 +395,7 @@ footer {
 		font-size: 15px;
 	}
 		.sidebar li ul li a {
-			padding-right: 40px;
+			padding-left: 40px;
 		}
 
 }
