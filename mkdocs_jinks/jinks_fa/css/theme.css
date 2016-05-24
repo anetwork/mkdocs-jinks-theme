@@ -315,6 +315,7 @@ header {
 }
 .content .code {
 	margin: 5px 0;
+    overflow: auto;
 }
 .content code {
 	margin: 3px 5px;
