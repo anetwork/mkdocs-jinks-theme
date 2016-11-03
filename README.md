@@ -3,7 +3,7 @@
 Mkdocs-jinks is a set of [Mkdocs](http://mkdocs.org) additional themes, which also supported RTL direction in Persian version.
 
 * [Persian Demo](http://anetwork.github.io/mkdocs-jinks-theme/persian/)
-* [Enlish Demo](http://anetwork.github.io/mkdocs-jinks-theme/)
+* [English Demo](http://anetwork.github.io/mkdocs-jinks-theme/)
 
 ## Dependency
 Mkdocs-jinks uses Mkdocs project to create themes as well as other official MKDocs themes, which has been written in Python.
