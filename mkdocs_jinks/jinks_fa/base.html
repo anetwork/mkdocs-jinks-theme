@@ -14,7 +14,7 @@
 		The page_title contains the title for a page as shown in the navigation.
 		Site name contains the name as defined in the mkdocs.yml
 	-->
-	<title>{% if page_title %}{{ page_title }} - {% endif %}{{ site_name }}</title>
+	<title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
 
 	<!--
 		Support custom favicon support.
@@ -53,14 +53,14 @@
 
 		http://www.mkdocs.org/user-guide/configuration/#google_analytics
 	-->
-	{% if google_analytics %}
+	{% if config.google_analytics %}
 	<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-			ga('create', '{{ google_analytics[0] }}', '{{ google_analytics[1] }}');
+			ga('create', '{{ config.google_analytics[0] }}', '{{ config.google_analytics[1] }}');
 			ga('send', 'pageview');
 	</script>
 	{% endif %}
@@ -91,7 +91,7 @@
 
 			<div class="right">
 
-				<h1>{% if page_title %}{{ page_title }} - {% endif %}{{ site_name }}</h1>
+				<h1>{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</h1>
 
 			</div>
 
@@ -111,13 +111,13 @@
 
 		<main class="rel oh">
 
-			{% if toc %}
+			{% if page.toc %}
 
 				<div class="left toc">
 
 					<ul>
 
-						{% for toc_item in toc %}
+						{% for toc_item in page.toc %}
 
 							<li class="title">
 
@@ -147,7 +147,7 @@
 
 				{% block content %}
 
-					{{ content }}
+					{{ page.content }}
 
 				{% endblock %}
 
@@ -157,19 +157,19 @@
 
 		<footer class="oh">
 
-			{% if repo_url %}
+			{% if config.repo_url %}
 
-				{% if repo_name == 'GitHub' %}
+				{% if config.repo_name == 'GitHub' %}
 
-					<a class="left" href="{{ repo_url }}">دسترسی به کد اصلی روی Github</a>
+					<a class="left" href="{{ config.repo_url }}">دسترسی به کد اصلی روی Github</a>
 
-				{% elif repo_name == 'Bitbucket' %}
+				{% elif config.repo_name == 'Bitbucket' %}
 
-					<a class="left" href="{{ repo_url }}">دسترسی به کد اصلی روی BitBucket</a>
+					<a class="left" href="{{ config.repo_url }}">دسترسی به کد اصلی روی BitBucket</a>
 
 				{% else %}
 
-					<a class="left" href="{{ repo_url }}">دسترسی به کد اصلی</a>
+					<a class="left" href="{{ config.repo_url }}">دسترسی به کد اصلی</a>
 
 				{% endif %}
 
